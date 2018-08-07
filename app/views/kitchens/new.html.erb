@@ -1,6 +1,19 @@
 <h1>Add a new kitchen</h1>
-<!--
-# <%= simple_form_for [@kitchen] do |f| %>
-#   <%= f.input :name %>
-#   <%= f.submit "add kitchen", class: "btn btn-primary" %>
-# <% end %> -->
+
+  <%= simple_form_for(@kitchen) do |f| %>
+  <% if @kitchen.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @kitchen.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= simple_form_for [@kitchen] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :location %>
+    <%= f.input :capacity %>
+    <%= f.submit "add kitchen", class: "btn btn-primary" %>
+  <% end %>

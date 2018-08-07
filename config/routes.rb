@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'bookings/new'
+  get 'bookings/create'
   get 'kitchens/edit'
   get 'kitchens/new'
   devise_for :users

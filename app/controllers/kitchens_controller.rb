@@ -10,7 +10,7 @@ class KitchensController < ApplicationController
     if @kitchen.save
       redirect_to kitchen_path
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -34,7 +34,7 @@ class KitchensController < ApplicationController
   private
 
   def kitchen_params
-    params.require(:kitchen).permit(:name, :capacity, :location, :user_id)
+    params.require(:kitchen).permit(:name, :capacity, :location)
   end
 
 end

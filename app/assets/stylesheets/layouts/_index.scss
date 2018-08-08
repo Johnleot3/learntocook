@@ -1,5 +1,14 @@
 // Import your layouts CSS files here.
-// Examples:
-// @import "dashboard";
-// @import "profile";
-// @import "map";
+
+h1 {
+  color: white;
+  margin: 0 !important;
+}
+
+p {
+  color: white;
+}
+
+.banner {
+  height: 100vh;
+}

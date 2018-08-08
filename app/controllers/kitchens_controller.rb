@@ -1,7 +1,7 @@
 class KitchensController < ApplicationController
 
   def index
-    @kitchens = Kitchen.all
+    @kitchens = Kitchen.where(location: params["location"], category: params["category"])
   end
 
   def show

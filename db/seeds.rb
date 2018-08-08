@@ -5,3 +5,27 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+Kitchen.destroy_all
+User.destroy_all
+
+puts 'Creating 10 fake users...'
+10.times do
+  user = User.new(
+    name: Faker::RuPaul.queen,
+    email: Faker::Internet.email,
+    password: Faker::Internet.password)
+  user.save!
+
+  puts "Creating a kitchen for #{user.name}..."
+  kitchen = Kitchen.new(
+    user: user,
+    name: Faker::Pokemon.location,
+    category: Faker::Food.dish,
+    location: "#{Faker::Address.city}",
+    capacity: rand(0..5)
+  )
+  kitchen.save!
+end
+puts 'Finished!'

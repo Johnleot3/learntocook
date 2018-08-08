@@ -1,2 +1,18 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<h1>Create a new booking</h1>
+<p>Check your bookings in your bookings folder</p>
+
+<%= simple_form_for(@booking) do |f| %>
+  <% if @booking.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @booking.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= simple_form_for [@booking] do |f| %>
+    <%= f.input :date %>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>

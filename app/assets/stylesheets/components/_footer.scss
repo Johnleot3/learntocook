@@ -4,15 +4,25 @@
  bottom: 0;
  width: 100%;
 }
+
+.footer-links {
+  color: white;
+}
+
 .flex-container {
   display: flex;
   align-content: flex-end;
 }
 
+a {
+  color: white;
+}
 p {
   color: white;
+
 }
 
 body {
   color: white;
+  font-size: 17px !important;
 }

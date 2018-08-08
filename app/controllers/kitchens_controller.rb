@@ -11,7 +11,6 @@ class KitchensController < ApplicationController
 
   def create
     @kitchen = Kitchen.new(kitchen_params)
-
     if @kitchen.save
       redirect_to kitchen_path
     else
@@ -34,7 +33,6 @@ class KitchensController < ApplicationController
 
     redirect_to kitchen_path
   end
-
 
   private
 

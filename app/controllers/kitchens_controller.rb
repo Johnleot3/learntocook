@@ -1,5 +1,10 @@
 class KitchensController < ApplicationController
 
+  def index
+    @kitchens = Kitchen.where(location: params["location"], category: params["category"])
+
+  end
+
   def new
     @kitchen = Kitchen.new
   end

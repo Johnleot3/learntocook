@@ -1,0 +1,5 @@
+<%= simple_form_for "", url: kitchens_path, method: :get do |f| %>
+<%= f.input :category %>
+<%= f.input :location %>
+<%= f.submit "search", class: "btn btn-primary" %>
+<% end %>

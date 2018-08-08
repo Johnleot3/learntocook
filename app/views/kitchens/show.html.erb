@@ -23,6 +23,7 @@
       <p>Description: <%= @kitchen.description %></p>
     </div>
   </div>
+  <%= link_to "Book", new_kitchen_booking_path(@kitchen), class: "btn btn-primary btn-lg" %>
 </body>
 </html>
 

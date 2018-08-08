@@ -1,2 +1,20 @@
 <h1>Kitchens#edit</h1>
 <p>Find me in app/views/kitchens/edit.html.erb</p>
+
+<%= simple_form_for(@kitchen) do |f| %>
+  <% if @kitchen.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @kitchen.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= simple_form_for [@kitchen] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :location %>
+    <%= f.input :capacity %>
+    <%= f.submit "Edit kitchen", class: "btn btn-primary" %>
+  <% end %>

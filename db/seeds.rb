@@ -18,13 +18,47 @@ puts 'Creating 10 fake users...'
     password: Faker::Internet.password)
   user.save!
 
+
   puts "Creating a kitchen for #{user.name}..."
+
   kitchen = Kitchen.new(
     user: user,
     name: Faker::Pokemon.location,
     category: Faker::Food.dish,
     description: Faker::Food.description,
-    location: Faker::Address.city,
+    location: "Lisbon",
+    capacity: rand(0..5)
+  )
+  kitchen.save!
+
+  kitchen = Kitchen.new(
+    user: user,
+    name: Faker::Pokemon.location,
+    category: Faker::Food.dish,
+    description: Faker::Food.description,
+    location: "Paris",
+    capacity: rand(0..5)
+  )
+  kitchen.save!
+
+
+  kitchen = Kitchen.new(
+    user: user,
+    name: Faker::Pokemon.location,
+    category: Faker::Food.dish,
+    description: Faker::Food.description,
+    location: "Naples",
+    capacity: rand(0..5)
+  )
+  kitchen.save!
+
+
+  kitchen = Kitchen.new(
+    user: user,
+    name: Faker::Pokemon.location,
+    category: Faker::Food.dish,
+    description: Faker::Food.description,
+    location: "Chalong",
     capacity: rand(0..5)
   )
   kitchen.save!

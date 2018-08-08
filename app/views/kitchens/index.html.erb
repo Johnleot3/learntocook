@@ -1,26 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Juana Cook with Juan?</title>
-</head>
-<body>
-  <h1>Juan's Available Kitchens</h1>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(2, 76, 122,0.9) 0%, rgba(2, 76, 122,0.9) 50%), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=43d2818abd122c626a47a12ae53ca481&auto=format&fit=crop&w=1950&q=80')">
+  <div class="text-center"><h1>Find a Kitchen</h1></div>
+
   <div class="container">
-    <div class="row">
-    <div class="row">
+    <div class="row padded-top">
       <% @kitchens.each do |kitchen| %>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?food');">
-            <div class="card-description">
-              <h2><%= kitchen.name %></h2>
-              <p><%= kitchen.category %></p>
-              <p><%= kitchen.location %></p>
+        <div class="col-xs-12 col-md-4">
+          <div class="card">
+            <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('http://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=12d3b017451f128af5bea846dda89b96')">
+              <div class="card-description">
+                <h3><%= kitchen.name %></h3>
+                <p><%= kitchen.location %></p>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Selena_Gomez_Bring_New_Album_%22Stars_Dance%22_to_Walmart_Soundcheck_Concert%21_%289345756562%29_%28cropped%29.jpg" alt="" class="card-avatar">
+              <p class="card-category"><%= kitchen.category %></p>
+            </div>
+            <div class="card-footer">
+              <p>Posted on <%= kitchen.created_at.to_date %></p>
+              <ul class="list-inline">
+                <li><a href=""><i class="fa fa-heart"></i></a></li>
+                <li><a href=""><i class="fa fa-share"></i></a></li>
+                <li><a href=""><i class="fa fa-star"></i></a></li>
+              </ul>
             </div>
           </div>
-      <% end %>
         </div>
+      <% end %>
     </div>
-    </div>
+
   </div>
-</body>
-</html>
+</div>

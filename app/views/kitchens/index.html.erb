@@ -6,14 +6,16 @@
       <% @kitchens.each do |kitchen| %>
         <div class="col-xs-12 col-md-4">
           <div class="card">
-            <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('http://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=12d3b017451f128af5bea846dda89b96')">
-              <div class="card-description">
-                <h3><%= kitchen.name %></h3>
-                <p><%= kitchen.location %></p>
+            <%= link_to kitchen_path(kitchen) do %>
+              <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('http://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=12d3b017451f128af5bea846dda89b96')">
+                <div class="card-description">
+                  <h3><%= kitchen.name %></h3>
+                  <p><%= kitchen.location %></p>
+                </div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Selena_Gomez_Bring_New_Album_%22Stars_Dance%22_to_Walmart_Soundcheck_Concert%21_%289345756562%29_%28cropped%29.jpg" alt="" class="card-avatar">
+                <p class="card-category"><%= kitchen.category %></p>
               </div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Selena_Gomez_Bring_New_Album_%22Stars_Dance%22_to_Walmart_Soundcheck_Concert%21_%289345756562%29_%28cropped%29.jpg" alt="" class="card-avatar">
-              <p class="card-category"><%= kitchen.category %></p>
-            </div>
+            <% end %>
             <div class="card-footer">
               <p>Posted on <%= kitchen.created_at.to_date %></p>
               <ul class="list-inline">
@@ -22,9 +24,9 @@
                 <li><a href=""><i class="fa fa-star"></i></a></li>
               </ul>
             </div>
+            <% end %>
           </div>
         </div>
-      <% end %>
     </div>
   </div>
 </div>

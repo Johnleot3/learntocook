@@ -1,8 +1,12 @@
 class KitchensController < ApplicationController
 
   def index
-    @kitchens = Kitchen.where(location: params["location"], category: params["category"])
+    @kitchens = Kitchen.where(location: params["location"])
+    @kitchens = Kitchen.all if @kitchens.empty?
+  end
 
+  def show
+    @kitchen = Kitchen.find(params[:id])
   end
 
   def new

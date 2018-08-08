@@ -23,8 +23,8 @@ puts 'Creating 10 fake users...'
     user: user,
     name: Faker::Pokemon.location,
     category: Faker::Food.dish,
-    description: Faker::Food.description
-    location: "#{Faker::Address.city}",
+    description: Faker::Food.description,
+    location: Faker::Address.city,
     capacity: rand(0..5)
   )
   kitchen.save!

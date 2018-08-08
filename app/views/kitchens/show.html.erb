@@ -7,13 +7,23 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h1><% @kitchen.name %></h1>
+        <h1>Name<%=@kitchen.name %></h1>
       </div>
     </div>
     <div class="row">
       <%= @kitchen.location %>
+    </div>
+    <div class="row">
+      <%= @kitchen.capacity %>
+    </div>
+    <div class="row">
+      <%= @kitchen.category %>
+    </div>
+    <div class="row">
       <%= @kitchen.description %>
     </div>
   </div>
 </body>
 </html>
+
+

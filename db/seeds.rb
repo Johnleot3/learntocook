@@ -16,8 +16,12 @@ puts 'Creating 9 fake users...'
   user = User.new(
     name: Faker::RuPaul.queen,
     email: Faker::Internet.email,
-    password: Faker::Internet.password)
+    password: Faker::Internet.password,
+    category: [Faker::Food.dish],
+    description: Faker::Food.description,
+    )
   user.save!
+
 
 
   puts "Creating a kitchen for #{user.name}..."
@@ -28,8 +32,8 @@ puts 'Creating 9 fake users...'
     category: Faker::Food.dish,
     description: Faker::Food.description,
     location: "Lisbon",
-    capacity: rand(0..5)
-  )
+    capacity: rand(0..5),
+    languages: [Faker::Demographic.race])
   kitchen.save!
 
   kitchen = Kitchen.new(
@@ -38,8 +42,8 @@ puts 'Creating 9 fake users...'
     category: Faker::Food.dish,
     description: Faker::Food.description,
     location: "Paris",
-    capacity: rand(0..5)
-  )
+    capacity: rand(0..5),
+    languages: [Faker::Demographic.race])
   kitchen.save!
 
 
@@ -49,8 +53,8 @@ puts 'Creating 9 fake users...'
     category: Faker::Food.dish,
     description: Faker::Food.description,
     location: "Naples",
-    capacity: rand(0..5)
-  )
+    capacity: rand(0..5),
+    languages: [Faker::Demographic.race])
   kitchen.save!
 
 
@@ -60,8 +64,9 @@ puts 'Creating 9 fake users...'
     category: Faker::Food.dish,
     description: Faker::Food.description,
     location: "Chalong",
-    capacity: rand(0..5)
-  )
+    capacity: rand(0..5),
+    languages: [Faker::Demographic.race])
+
   kitchen.save!
 end
 puts 'Finished!'

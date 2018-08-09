@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_many :kitchens
   has_many :bookings
-
+  
   validates :name, presence: true
   validates :description, presence: true
   validates :category, presence: true

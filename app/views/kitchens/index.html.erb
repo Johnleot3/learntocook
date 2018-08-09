@@ -9,8 +9,8 @@
             <%= link_to kitchen_path(kitchen) do %>
               <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('http://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=12d3b017451f128af5bea846dda89b96')">
                 <div class="card-description">
-                  <h3><%= kitchen.name %></h3>
-                  <p><%= kitchen.location %></p>
+                  <h3 class="kitchen-index"><%= kitchen.name %></h3>
+                  <p class="kitchen-index"><%= kitchen.location %></p>
                 </div>
                 <img src="https://cdn.iconstyle.al/uploads/2018/03/Selena-Gomez-Hairstyles-2018-3.jpg" alt="" class="avatar-small">
                 <p class="card-category"><%= kitchen.category %></p>

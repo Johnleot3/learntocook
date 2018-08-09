@@ -3,6 +3,10 @@
   margin-top: 50px;
 }
 
+.kitchen-index {
+  color: white;
+}
+
 .card {
   border-radius: 1px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -45,7 +49,6 @@
   -moz-animation-name: bounce;
 }
 
-
 .card-body {
   height: 180px;
   background-size: cover;
@@ -62,7 +65,10 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: lighter;
-  opacity: 0.9;
+}
+
+.card-category p {
+  color: white;
 }
 
 .card-description {

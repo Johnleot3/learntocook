@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  match 'users/:id', to: 'users#show', via: 'get'
-  match 'users/:id', to: 'pages#dashboard', via: 'get'
   resources :kitchens do
     resources :bookings, only: [ :new, :create]
   end

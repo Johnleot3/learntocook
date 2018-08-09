@@ -1,15 +1,13 @@
-.container {
+.container-bookings {
   padding-top: 50px;
-  padding-bottom: 250px;
+  padding-bottom: 550px;
   text-align: center;
 }
-
-.heading-show {
-  color: black;
-  padding-bottom: 25px;
+.row-book {
+  padding-bottom: 100px;
 }
 
-.box {
+.box-book {
   box-sizing: border-box;
   border: 1px solid #ddd;
   background-color: rgba(177, 255, 255, 0.2);
@@ -23,16 +21,6 @@
   padding-left: 50px;
 }
 
-.btn-primary {
-  margin-top: 25px;
+.text {
   text-align: center;
-  background-color: #FF6B00;
-}
-
-.row-book {
-  padding-top: 40px;
-}
-
-p {
-  color: black;
 }

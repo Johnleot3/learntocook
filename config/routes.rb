@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  match 'users/:id', to: 'users#show', via: 'get'
   resources :kitchens do
     resources :bookings, only: [ :new, :create]
   end

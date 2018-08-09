@@ -5,4 +5,7 @@ class Kitchen < ApplicationRecord
   validates :name, presence: true
   validates :location, presence: true
   validates :capacity, presence: true
+  validates :description, presence: true
+  validates :category, presence: true
+  validates :languages, presence: true
 end

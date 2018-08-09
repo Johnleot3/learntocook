@@ -7,11 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+Booking.destroy_all
 Kitchen.destroy_all
 User.destroy_all
 
-puts 'Creating 10 fake users...'
-10.times do
+puts 'Creating 9 fake users...'
+9.times do
   user = User.new(
     name: Faker::RuPaul.queen,
     email: Faker::Internet.email,

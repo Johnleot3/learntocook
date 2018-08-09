@@ -1,0 +1,34 @@
+.container {
+  padding-top: 50px;
+  padding-bottom: 250px;
+  text-align: center;
+}
+
+h1 {
+  color: black;
+  padding-bottom: 25px;
+}
+
+.box {
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  background-color: rgba(177, 255, 255, 0.2);
+  display: inline-block;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  height: 300px;
+  width: 500px;
+  text-align: center;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.btn-primary {
+  margin-top: 25px;
+  text-align: center;
+  background-color: #FF6B00;
+}
+
+p {
+  color: black;
+}

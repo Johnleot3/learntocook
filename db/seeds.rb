@@ -37,6 +37,7 @@ puts 'Creating 9 fake users...'
     location: "Lisbon",
     kitchen_pic: kitchens_url.sample,
     capacity: rand(0..5),
+    price: rand(15..50),
     languages: [Faker::Demographic.race])
   kitchen.save!
 
@@ -48,6 +49,7 @@ puts 'Creating 9 fake users...'
     location: "Paris",
     kitchen_pic: kitchens_url.sample,
     capacity: rand(0..5),
+    price: rand(15..50),
     languages: [Faker::Demographic.race])
   kitchen.save!
 
@@ -60,6 +62,7 @@ puts 'Creating 9 fake users...'
     location: "Naples",
     kitchen_pic: kitchens_url.sample,
     capacity: rand(0..5),
+    price: rand(15..50),
     languages: [Faker::Demographic.race])
   kitchen.save!
 
@@ -72,6 +75,7 @@ puts 'Creating 9 fake users...'
     location: "Chalong",
     kitchen_pic: kitchens_url.sample,
     capacity: rand(0..5),
+    price: rand(15..50),
     languages: [Faker::Demographic.race])
 
   kitchen.save!

@@ -3,58 +3,70 @@
 <!-- banner -->
 <!-- container divided vertically by 3 sections sections -->
 
-    <div class="container text-center">
-      <div class="grid">
-        <div class="card main">
-          <div class="card-content ">
-            <h1>Your booking is confirmed for
-              <p><%= @user.bookings.last.kitchen.name %>'s Kitchen in <%= @user.bookings.last.kitchen.location %></p>
-            </h1>
+ <div class="text-center"><div class="text-center">
+  <h1 class="heading"> Your booking is confirmed for:<p class="paragraph-dashboard"><%= @user.bookings.last.kitchen.name %>'s Kitchen in <%= @user.bookings.last.kitchen.location %></p></h1>
+</div>
 
-            <!-- <p><%#= @user.location %></p> -->
-            <!-- <a href="#" classiujh       bbv="btn btn-primary btn-lg">My Kitchens</a> -->
+  <div class="container">
+    <div class="row">
+      <h3 class="uppercase">Your bookings</h3>
+      <% @user.bookings.each do |booking| %>
+        <div class="col-xs-12 col-md-4">
+          <div class="card card-index">
+              <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= booking.kitchen.kitchen_pic  %>)' ">
+                <div class="card-description">
+                  <p><%= booking.kitchen.name %></p>
+                  <p class="location"><%= booking.kitchen.location %></p>
+                </div>
+                <img src="<%= booking.kitchen.user.avatar %>" alt="" class="avatar-small">
+                <p class="card-category"><%= booking.kitchen.category %></p>
+              </div>
+            <div class="card-footer">
+              <p>Posted on <%= booking.kitchen.created_at.to_date %></p>
+              <ul class="list-inline">
+                <li><a href=""><i class="fa fa-heart"></i></a></li>
+                <li><a href=""><i class="fa fa-share"></i></a></li>
+                <li><a href=""><i class="fa fa-star"></i></a></li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="card dashboard-card">
-          <div class="card-content dashboard-card-content">
-            <h3> My Bookings </h3>
-<!--             NEED TO ASK QUESTION ABOUT THIS
- -->        <% @user.bookings.each do |booking| %>
-              <li class="dashboard-list"><%= booking.kitchen.name %></li>
-              <li class="dashboard-list"><%= booking.kitchen.location %></li>
-              <li class="dashboard-list"><%= booking.kitchen.category %></li>
-
-            <% end %>
-        </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <h3>My Kitchens</h3>
-
-<!--             NEED TO ASK QUESTION ABOUT THIS
- -->        <% @user.kitchens.each do |kitchen| %>
-              <li><%= kitchen.name %></li>
-              <li><%= kitchen.location %></li>
-              <li><%= kitchen.category %></li>
-            <% end %>
-          </div>
-        </div>
-        <div class="card  description">
-          <div class="card-content">
-            <h3>More about <%= @user.name %></h3>
-            <p class="text-justify">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
-        </div>
-        <%= link_to "Create a Kitchen", new_kitchen_path, class: "btn btn-primary btn-lg" %>
-        <%= link_to "Search Kitchens", root_path, class: "btn btn-primary btn-lg" %>
-      </div>
+      <% end %>
     </div>
+
+    <div class="row">
+      <h3 class="uppercase">Your Kitchens</h3>
+      <% @user.kitchens.each do |kitchen| %>
+        <div class="col-xs-12 col-md-4">
+          <div class="card card-index">
+              <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= kitchen.kitchen_pic  %>)' ">
+                <div class="card-description">
+                  <p><%= kitchen.name %></p>
+                  <p class="location"><%= kitchen.location %></p>
+                </div>
+                <img src="<%= kitchen.user.avatar %>" alt="" class="avatar-small">
+                <p class="card-category"><%= kitchen.category %></p>
+              </div>
+            <div class="card-footer">
+              <p>Posted on <%= kitchen.created_at.to_date %></p>
+              <ul class="list-inline">
+                <li><a href=""><i class="fa fa-heart"></i></a></li>
+                <li><a href=""><i class="fa fa-share"></i></a></li>
+                <li><a href=""><i class="fa fa-star"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+  <div class="row">
+    <h3 class="uppercase">Your profile</h3>
+  </div>
+
+
+  </div>
+
+
 
 

@@ -2,14 +2,14 @@
 
   <%= simple_form_for [@kitchen] do |f| %>
     <%= f.input :name %>
-    <%= f.input :languages %>
     <%= f.input :category %>
     <%= f.input :price %>
     <%= f.input :location %>
     <%= f.input :capacity %>
     <%= f.input :description %>
 
-    <%= f.submit "add kitchen", class: "btn btn-primary" %>
+    <%= f.submit "Add kitchen", class: "btn-small", redirect_to kitchen_path %>
+
   <% end %>
 
 

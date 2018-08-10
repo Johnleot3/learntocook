@@ -8,11 +8,11 @@
         <div class="col-xs-12 col-md-4">
           <div class="card">
             <%= link_to kitchen_path(kitchen) do %>
-              <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), <%= kitchen.kitchen_pic %>">
+              <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= kitchen.kitchen_pic  %>)' ">
                 <div class="card-description">
                   <p><%= kitchen.location %></p>
                 </div>
-                <img src="https://cdn.iconstyle.al/uploads/2018/03/Selena-Gomez-Hairstyles-2018-3.jpg" alt="" class="avatar-small">
+                <img src="<%= kitchen.user.avatar %>" alt="" class="avatar-small">
                 <p class="card-category"><%= kitchen.category %></p>
               </div>
             <div class="card-footer">

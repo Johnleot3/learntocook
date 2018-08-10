@@ -11,6 +11,7 @@ Booking.destroy_all
 Kitchen.destroy_all
 User.destroy_all
 
+avatar_url = ["https://randomuser.me/api/portraits/men/76.jpg", "https://randomuser.me/api/portraits/men/23.jpg", "https://randomuser.me/api/portraits/women/60.jpg", "https://randomuser.me/api/portraits/women/6.jpg", "https://randomuser.me/api/portraits/women/9.jpg", "https://randomuser.me/api/portraits/women/47.jpg", "https://randomuser.me/api/portraits/men/62.jpg", "https://randomuser.me/api/portraits/men/88.jpg", "https://randomuser.me/api/portraits/men/77.jpg", "https://randomuser.me/api/portraits/women/62.jpg", "https://randomuser.me/api/portraits/women/21.jpg", "https://randomuser.me/api/portraits/women/20.jpg"]
 puts 'Creating 9 fake users...'
 9.times do
   user = User.new(
@@ -19,6 +20,7 @@ puts 'Creating 9 fake users...'
     password: Faker::Internet.password,
     category: [Faker::Food.dish],
     description: Faker::Food.description,
+    avatar: avatar_url.sample
     )
   user.save!
 

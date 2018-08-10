@@ -3,5 +3,7 @@ class UsersController < ApplicationController
     if user_signed_in?
       @user = current_user
     end
+
+    @kitchens = Kitchen.all
   end
 end

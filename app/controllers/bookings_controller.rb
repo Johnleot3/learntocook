@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking.kitchen = @kitchen
     @booking.user = current_user
     if @booking.save
-      redirect_to kitchen_path(@kitchen)
+      redirect_to kitche_path(@kitchen)
     else
       render "users/show"
     end

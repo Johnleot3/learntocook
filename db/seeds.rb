@@ -29,7 +29,7 @@ puts 'Creating 9 fake users...'
 
   kitchen = Kitchen.new(
     user: user,
-    name: Faker::Pokemon.location,
+    name: Faker::Name.name,
     category: Faker::Food.dish,
     description: Faker::Food.description,
     location: "Lisbon",
@@ -40,7 +40,7 @@ puts 'Creating 9 fake users...'
 
   kitchen = Kitchen.new(
     user: user,
-    name: Faker::Pokemon.location,
+    name: Faker::Name.name,
     category: Faker::Food.dish,
     description: Faker::Food.description,
     location: "Paris",
@@ -52,7 +52,7 @@ puts 'Creating 9 fake users...'
 
   kitchen = Kitchen.new(
     user: user,
-    name: Faker::Pokemon.location,
+    name: Faker::Name.name,
     category: Faker::Food.dish,
     description: Faker::Food.description,
     location: "Naples",
@@ -64,7 +64,7 @@ puts 'Creating 9 fake users...'
 
   kitchen = Kitchen.new(
     user: user,
-    name: Faker::Pokemon.location,
+    name: Faker::Name.name,
     category: Faker::Food.dish,
     description: Faker::Food.description,
     location: "Chalong",

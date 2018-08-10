@@ -8,7 +8,7 @@
         <div class="col-xs-12 col-md-4">
           <div class="card">
             <%= link_to kitchen_path(kitchen) do %>
-              <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('http://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=12d3b017451f128af5bea846dda89b96')">
+              <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), <%= kitchen.kitchen_pic %>">
                 <div class="card-description">
                   <p><%= kitchen.location %></p>
                 </div>

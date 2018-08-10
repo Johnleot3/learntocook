@@ -3,9 +3,18 @@
   padding-bottom: 550px;
   text-align: center;
 }
+
+.heading-newbooking {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
+
 .row-book {
   padding-bottom: 100px;
   margin-top: 25px;
+  margin-bottom: -500px;
+  text-align: center;
 }
 
 .box-book {
@@ -13,10 +22,10 @@
   border: 1px solid #ddd;
   background-color: rgba(248, 255, 255, 0.3);
   display: inline-block;
-  padding-top: 50px;
+  padding-top: 20px;
   padding-bottom: 20px;
-  height: 300px;
-  width: 500px;
+  height: 280px;
+  width: 300px;
   text-align: center;
   padding-right: 50px;
   padding-left: 50px;
@@ -31,4 +40,5 @@
   color: black;
   text-align: center;
 }
+
 

@@ -15,14 +15,14 @@
             <!-- <a href="#" classiujh       bbv="btn btn-primary btn-lg">My Kitchens</a> -->
           </div>
         </div>
-        <div class="card">
-          <div class="card-content">
+        <div class="card dashboard-card">
+          <div class="card-content dashboard-card-content">
             <h3> My Bookings </h3>
 <!--             NEED TO ASK QUESTION ABOUT THIS
  -->        <% @user.bookings.each do |booking| %>
-              <li><%= booking.kitchen.name %></li>
-              <li><%= booking.kitchen.location %></li>
-              <li><%= booking.kitchen.category %></li>
+              <li class="dashboard-list"><%= booking.kitchen.name %></li>
+              <li class="dashboard-list"><%= booking.kitchen.location %></li>
+              <li class="dashboard-list"><%= booking.kitchen.category %></li>
 
             <% end %>
         </div>
@@ -41,7 +41,7 @@
         </div>
         <div class="card  description">
           <div class="card-content">
-            <h3>More about <%#= @user.name %></h3>
+            <h3>More about <%= @user.name %></h3>
             <p class="text-justify">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

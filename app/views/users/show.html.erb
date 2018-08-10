@@ -8,36 +8,32 @@
         <div class="card main">
           <div class="card-content ">
             <h1>Your booking is confirmed for
-              <!-- <p><%#= @user.bookings.last %></p> -->
+              <p><%= @user.bookings.last.kitchen.name %>'s Kitchen in <%= @user.bookings.last.kitchen.location %></p>
             </h1>
 
             <!-- <p><%#= @user.location %></p> -->
-            <!-- <a href="#" class="btn btn-primary btn-lg">My Kitchens</a> -->
+            <!-- <a href="#" classiujh       bbv="btn btn-primary btn-lg">My Kitchens</a> -->
           </div>
         </div>
         <div class="card">
           <div class="card-content">
             <h3> My Bookings </h3>
-            <!-- PSEUDO CODE
-            - if the user has bookings list the bookings available
-            - bookings be a link_to their show page
-            - if they don't have bookings put "user does not have any bookings yet" -->
-            <%# @user_bookings = Booking.where( current_user = @booking.user.id ) %>
 <!--             NEED TO ASK QUESTION ABOUT THIS
- -->        <%# @user_booking.each do |booking| %>
+ -->        <% @user.bookings.each do |booking| %>
+              <li><%= booking.kitchen.name %></li>
+              <li><%= booking.kitchen.location %></li>
+              <li><%= booking.kitchen.category %></li>
+
+            <% end %>
         </div>
         </div>
         <div class="card">
           <div class="card-content">
             <h3>My Kitchens</h3>
-            <!-- PSEUDO CODE
-            - if the user has kitchens list the kitchens available
-            - kitchens be a link_to their show page
-            - if they don't have kitchens put "user does not have any kitchens yet" -->
 
-            <%# @user_kitchens = Kitchen.where( current_user = @booking.user.id ) %>
 <!--             NEED TO ASK QUESTION ABOUT THIS
- -->        <%# @user_kitchens.each do |kitchen| %>
+ -->        <% @user.kitchens.each do |kitchen| %>
+            <% end %>
           </div>
         </div>
         <div class="card  description">

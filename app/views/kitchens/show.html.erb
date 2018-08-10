@@ -1,6 +1,6 @@
 <body>
   <div class="container" style="background-color:
-   rgba(255, 255, 255, 0.2) 50%)>
+   rgba(255, 255, 255, 0.2) 50%)">
   <div class="container col-xs-12 col-sm-4 col-sm-offset-4">
     <div class="row">
       <div class="col-xs-12">
@@ -21,9 +21,16 @@
       <p class="lines">Description: <%= @kitchen.description %></p>
     </div>
     </div>
-      <div class="row-book">
-      <%= link_to "Book", new_kitchen_booking_path(@kitchen), class: "btn-small" %>
-       </div>
+        <h1 class="heading-newbooking">Create a New Booking for <%= @kitchen.name %> </h1>
+        <div class="box-book">
+          <%= simple_form_for [@kitchen, @booking] do |f| %>
+          <%= f.input :date %>
+          <p class="text">Check your dashboard to see all your bookings</p>
+        </div>
+        <div class="row-book">
+              <%= f.submit "Book", class: "btn-small" %>
+               </div>
+               <% end %>
   </div>
   </div>
 </body>

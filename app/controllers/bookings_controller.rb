@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to kitchen_path(@kitchen)
     else
-      render 'root'
+      render "users/show"
     end
   end
 

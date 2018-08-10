@@ -2,7 +2,58 @@
 <!-- navbar -->
 <!-- banner -->
 <!-- container divided vertically by 3 sections sections -->
-    <h1>HELLLO HOPE I SEE THIS MESSAGE </h1>
-    <%= @user.name %>
+
+    <div class="container text-center">
+      <div class="grid">
+        <div class="card main">
+          <div class="card-content ">
+            <h1>Your booking is confirmed for
+              <!-- <p><%#= @user.bookings.last %></p> -->
+            </h1>
+
+            <!-- <p><%#= @user.location %></p> -->
+            <!-- <a href="#" class="btn btn-primary btn-lg">My Kitchens</a> -->
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h3> My Bookings </h3>
+            <!-- PSEUDO CODE
+            - if the user has bookings list the bookings available
+            - bookings be a link_to their show page
+            - if they don't have bookings put "user does not have any bookings yet" -->
+            <%# @user_bookings = Booking.where( current_user = @booking.user.id ) %>
+<!--             NEED TO ASK QUESTION ABOUT THIS
+ -->        <%# @user_booking.each do |booking| %>
+        </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h3>My Kitchens</h3>
+            <!-- PSEUDO CODE
+            - if the user has kitchens list the kitchens available
+            - kitchens be a link_to their show page
+            - if they don't have kitchens put "user does not have any kitchens yet" -->
+
+            <%# @user_kitchens = Kitchen.where( current_user = @booking.user.id ) %>
+<!--             NEED TO ASK QUESTION ABOUT THIS
+ -->        <%# @user_kitchens.each do |kitchen| %>
+          </div>
+        </div>
+        <div class="card  description">
+          <div class="card-content">
+            <h3>More about <%#= @user.name %></h3>
+            <p class="text-justify">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
 

@@ -4,7 +4,10 @@
 <!-- container divided vertically by 3 sections sections -->
 
  <div class="text-center"><div class="text-center">
+  <% unless @user.bookings.last.nil? %>
   <h1 class="heading"> Your booking is confirmed for:<p class="paragraph-dashboard"><%= @user.bookings.last.kitchen.name %>'s Kitchen in <%= @user.bookings.last.kitchen.location %></p></h1>
+
+  <% end %>
 </div>
 
   <div class="container">

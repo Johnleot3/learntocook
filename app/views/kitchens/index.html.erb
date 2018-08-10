@@ -6,7 +6,7 @@
     <div class="row">
       <% @kitchens.each do |kitchen| %>
         <div class="col-xs-12 col-md-4">
-          <div class="card">
+          <div class="card card-index">
             <%= link_to kitchen_path(kitchen) do %>
               <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= kitchen.kitchen_pic  %>)' ">
                 <div class="card-description">

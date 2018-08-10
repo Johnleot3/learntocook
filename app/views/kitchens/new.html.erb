@@ -2,7 +2,7 @@
 
   <%= simple_form_for [@kitchen] do |f| %>
     <%= f.input :name %>
-    <%= f.input :language %>
+    <%= f.input :languages %>
     <%= f.input :category %>
     <%= f.input :price %>
     <%= f.input :location %>
@@ -11,3 +11,5 @@
 
     <%= f.submit "add kitchen", class: "btn btn-primary" %>
   <% end %>
+
+

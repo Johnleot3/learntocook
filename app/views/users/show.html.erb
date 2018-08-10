@@ -2,29 +2,7 @@
 <!-- navbar -->
 <!-- banner -->
 <!-- container divided vertically by 3 sections sections -->
-<body>
-  <div class="container">
-    <div class="banner">
-      <div class="avatar">
-        <!-- avatar large image placed here -->
-        <h4>@user.birthday</h4>
-        <h5>@user.location</h5>
-      </div>
-    </div>
-    <div class="hashtags"><!-- insert category hashtags here -->
-      <h4>My Favorite Foods</h4>
-      <% @favorites = @user.category %>
-      <% @favorites.each do |favorite| %>
-      <p><%= favorite %></p>
-      <% end %>
-    </div>
-    <div class="description_container">
-      <h2>About Me</h2>
-      <p><%= @user.description %></p>
-      <p><%= @user.languages %></p>
-    </div>
-    <div class="sidebar"><!-- acting as the wishlist component for ww -->
+    <h1>HELLLO HOPE I SEE THIS MESSAGE </h1>
+    <%= @user.name %>
 
-    </div>
-  </div>
-</body>
+

@@ -8,10 +8,11 @@ class BookingsController < ApplicationController
     @kitchen = Kitchen.find(params[:kitchen_id])
     @booking = Booking.new(booking_params)
     @booking.kitchen = @kitchen
+    @booking.user = current_user
     if @booking.save
       redirect_to kitchen_path(@kitchen)
     else
-      render 'root'
+      render "users/show"
     end
   end
 
